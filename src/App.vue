@@ -4,8 +4,38 @@
     <router-link :to="{ name: 'About' }">About</router-link>
     <router-link :to="{ name: 'Jobs' }">Pekerjaan</router-link>
   </div>
+
+  <button @click="redirect">Redirect</button>
+  <button @click="back">Go Back</button>
+  <button @click="forward">Go Forward</button>
+
   <router-view/>
 </template>
+
+<script>
+// Script
+export default {
+  methods: {
+    // For Redirect
+    redirect() {
+      // Redirect ke Route Home
+      this.$router.push({ name: 'Home'})
+    },
+
+    // For Back
+    back() {
+      // Mundur satu berdasarkan history
+      this.$router.go(-1)
+    },
+
+    // For Forward
+    forward() {
+      // Maju satu berdasarkan history
+      this.$router.go(1)
+    }
+  }
+}
+</script>
 
 <style>
 #app {
@@ -31,5 +61,12 @@
 #nav a.router-link-exact-active {
   color: white;
   background: crimson;
+}
+
+button{
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
 }
 </style>
