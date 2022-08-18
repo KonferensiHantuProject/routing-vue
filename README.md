@@ -1,4 +1,4 @@
-# Bone Jobs
+# Bone Job
 
 ## Project setup
 ```
