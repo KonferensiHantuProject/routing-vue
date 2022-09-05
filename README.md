@@ -1,6 +1,6 @@
 # Bone Jobs
 
-## Setup Projek
+## Project Setup
 ```
 npm install
 ```
